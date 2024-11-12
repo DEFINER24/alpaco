@@ -1,0 +1,58 @@
+.desktop-1-child {
+    position: absolute;
+    top: 773.62px;
+    left: 330.76px;
+    border-radius: 72px;
+    background-color: #8aaf89;
+    width: 1258.5px;
+    height: 140.6px;
+}
+.desktop-1-item {
+    position: absolute;
+    top: 793.94px;
+    left: 1469.84px;
+    border-radius: 50%;
+    background-color: #739672;
+    width: 100px;
+    height: 100px;
+}
+.desktop-1-inner {
+    position: absolute;
+    top: 816.64px;
+    left: 1519.84px;
+    width: 0px;
+    height: 55.3px;
+    object-fit: contain;
+}
+.div {
+    position: absolute;
+    top: 812.44px;
+    left: 386.27px;
+    font-weight: 600;
+    opacity: 0.66;
+}
+.desktop-1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #a3cca2;
+    width: 1920px;
+    height: 1080px;
+}
+.group-child {
+    position: absolute;
+    top: 112.91px;
+    left: 239.08px;
+    width: 1400.4px;
+    height: 854.2px;
+}
+.desktop-1-parent {
+    width: 100%;
+    position: relative;
+    height: 1080px;
+    text-align: left;
+    font-size: 51.8px;
+    color: #3f573f;
+    font-family: Pretendard;
+}
+

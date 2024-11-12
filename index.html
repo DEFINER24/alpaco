@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	<style>
+    	body {
+      		display: flex;
+      		justify-content: center;
+      		align-items: center;
+      		height: 100vh;
+      		background-color: #f9f9f9;
+      		flex-direction: column;
+      		margin: 0;
+    	}
+    	
+    	/* 입력 필드 및 버튼 중앙 정렬 */
+    	.input-container {
+      		text-align: center;
+      		margin-bottom: 20px;
+    	}
+    	
+    	#userInput {
+      		width: 500px;
+      		padding: 10px;
+      		border: 1px solid #ccc;
+      		border-radius: 5px;
+      		font-size: 50px;
+      		box-sizing: border-box;
+    	}
+    	
+    	#submitButton {
+      		margin-top: 10px;
+      		padding: 10px 20px;
+      		font-size: 50px;
+      		cursor: pointer;
+      		border: none;
+      		background-color: #007bff;
+      		color: white;
+      		border-radius: 5px;
+      		transition: background-color 0.3s;
+    	}
+    	
+    	#submitButton:hover {
+      		background-color: #0056b3;
+    	}
+    	
+    	/* 채팅 박스 스타일 */
+    	#chatBox {
+      		width: 500px;
+      		max-height: 600px;
+      		overflow-y: auto;
+      		background-color: #ffffff;
+      		border: 1px solid #ddd;
+      		border-radius: 5px;
+      		padding: 10px;
+      		box-sizing: border-box;
+    	}
+    	
+    	.message {
+      		background-color: #e1ffc7;
+      		padding: 10px;
+      		border-radius: 10px;
+      		margin: 10px 0;
+      		width: fit-content;
+      		max-width: 80%;
+      		clear: both;
+    	}
+    	
+    	.user-message {
+      		background-color: #007bff;
+      		color: white;
+      		margin-left: auto;
+    	}
+  	</style>
+</head>
+<body>
+    <h1>사이버 보안 도우미</h1>
+  	<!-- 입력 필드 및 버튼 -->
+  	<div class="input-container">
+    	
+    	<input type="text" id="userInput" placeholder="메세지를 입력하세요" />
+    	<br><br>
+    	<button id="submitButton">확인</button>
+  	</div>
+  
+  	<!-- 채팅 기록 박스 -->
+  	<div id="chatBox"></div>
+
+  	<!-- JavaScript 코드 -->
+  	<script>
+    	document.getElementById('submitButton').addEventListener('click', function() {
+      		const inputField = document.getElementById('userInput');
+      		const chatBox = document.getElementById('chatBox');
+      		const message = inputField.value.trim();
+      
+      		if (message) {
+        		// 채팅 메시지 요소 생성
+        		const messageElement = document.createElement('div');
+        		messageElement.classList.add('message', 'user-message');
+        		messageElement.textContent = message;
+        		chatBox.insertBefore(messageElement, chatBox.firstChild); // 위에 쌓이도록 설정
+        
+        		// 입력 필드 초기화
+        		inputField.value = '';
+        
+        		// 스크롤을 위로 이동
+        		chatBox.scrollTop = 0;
+      		}
+    	});
+  	</script>
+</body>
+</html>
